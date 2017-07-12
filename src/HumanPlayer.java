@@ -9,9 +9,11 @@ public class HumanPlayer extends Player {
         super(userName, choice);
 
     }
+
     public HumanPlayer() {
 
     }
+
     @Override
     public Roshambo generateRoshambo() {
         Scanner scan = new Scanner(System.in);
@@ -33,7 +35,8 @@ public class HumanPlayer extends Player {
                 return Roshambo.SCISSORS;
             default:
                 System.out.println("Something went terribly wrong");
+
+                return null;
         }
-        return null;
     }
 }

@@ -25,12 +25,13 @@ public abstract class Player {
     }
 
     public Roshambo getChoice() {
+        Scanner scan = new Scanner(System.in);
         Computer1 computer1 = new Computer1();
         Computer2 computer2 = new Computer2();
         HumanPlayer humanPlayer = new HumanPlayer();
         Roshambo userResult = null;
         Roshambo opponentResult = null;
-        Scanner scan = new Scanner(System.in);
+
         System.out.println("Would you like to play against Computer1 or Computer2? (a/b)");
         String userChoice = scan.nextLine();
 
@@ -57,6 +58,7 @@ public abstract class Player {
         }
         return choice;
     }
+
     public abstract Roshambo generateRoshambo();
 
 
